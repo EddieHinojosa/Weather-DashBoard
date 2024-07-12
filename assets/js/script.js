@@ -20,7 +20,7 @@ document.getElementById('history-list').addEventListener('click', function(e) {
 //function to fetch the weather data from the api
 function getWeather(city) {
     //fetch request to the api
-    fetch(`api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`)
+    fetch(`api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
     .then((response) => response.json())
     .then((data) => {
         //function to display the weather data
