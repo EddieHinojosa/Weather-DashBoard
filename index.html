@@ -16,6 +16,12 @@
                 <input type="text" id="city-search" placeholder="Search for a city...">
                 <button id="search-button">Search</button>
             </div>
+            <div class="search-history">
+                <h2>Search History</h2>
+                <ul id="history-list">
+                    <!-- Search history items will be appended here -->
+                </ul>
+            </div>
             <div class="popular-cities">
                 <h2>Popular Cities</h2>
                 <ul>
@@ -29,10 +35,15 @@
         </div>
         <div class="right-column">
             <div id="weather-display">
-                <!-- Weather details will be displayed here -->
+                <h2 id="city-name">City Name</h2>
+                <p id="date">Date</p>
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <p id="temperature">Temperature: --</p>
+                <p id="humidity">Humidity: --</p>
+                <p id="wind-speed">Wind Speed: --</p>
             </div>
             <div id="forecast-display">
-                <!-- 5-day forecast will be displayed here -->
+                <!-- 5-day forecast items will be appended here -->
             </div>
         </div>
     </div>
