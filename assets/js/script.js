@@ -15,7 +15,7 @@ document.getElementById('history-list').addEventListener('click', function(e) {
 });
 
 function getWeather(city) {
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`)
     .then(response => response.json())
     .then(data => {
         displayWeather(data);
@@ -33,7 +33,7 @@ function displayWeather(data) {
     document.getElementById('city-name').textContent = cityName;
     document.getElementById('date').textContent = new Date(currentWeather.dt_txt).toLocaleDateString();
     document.getElementById('weather-icon').src = `https://openweathermap.org/img/w/${currentWeather.weather[0].icon}.png`;
-    document.getElementById('temperature').textContent = `Temperature: ${currentWeather.main.temp} °C`;
+    document.getElementById('temperature').textContent = `Temperature: ${currentWeather.main.temp} °F`;
     document.getElementById('humidity').textContent = `Humidity: ${currentWeather.main.humidity} %`;
     document.getElementById('wind-speed').textContent = `Wind Speed: ${currentWeather.wind.speed} m/s`;
     
@@ -51,7 +51,7 @@ function displayForecast(data) {
         dayDiv.innerHTML = `
             <p>${new Date(forecast.dt_txt).toLocaleDateString()}</p>
             <img src="https://openweathermap.org/img/w/${forecast.weather[0].icon}.png" alt="Weather Icon">
-            <p>Temp: ${forecast.main.temp} °C</p>
+            <p>Temp: ${forecast.main.temp} °F</p>
             <p>Humidity: ${forecast.main.humidity} %</p>
             <p>Wind: ${forecast.wind.speed} m/s</p>
         `;
@@ -66,3 +66,4 @@ function addToHistory(city) {
     historyItem.textContent = city;
     historyList.appendChild(historyItem);
 }
+
