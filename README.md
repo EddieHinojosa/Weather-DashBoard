@@ -72,7 +72,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 * Eddie Hinojosa: [https://github.com/EddieHinojosa](https://github.com/EddieHinojosa)
 
-* Live link: []()
+* Live link: [https://eddiehinojosa.github.io/Weather-DashBoard/](https://eddiehinojosa.github.io/Weather-DashBoard/)
 
 
 
