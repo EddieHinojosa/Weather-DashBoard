@@ -12,6 +12,11 @@
 
 <!-- ABOUT THE PROJECT -->
 
+# Screenshot fo site
+
+![weather dashboard image](https://github.com/user-attachments/assets/e671ce0d-72c4-4237-bc1f-d46d52537581)
+
+
 
 ## How It Works:
 
