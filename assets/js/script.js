@@ -1,9 +1,13 @@
+//api key for the open weather map site
 const apiKey = '3b58890c03b5bd5e440882745e74cfa4';
 
+//this will get the weather data from the open weather map site
 document.getElementById('search-button').addEventListener('click', function() {
     const city = document.getElementById('city-search').value;
     if (city) {
+        //this will pull teh city from the API
         getWeather(city);
+        //this will add the city to the history list on function from line 68
         addToHistory(city);
     }
 });
@@ -48,6 +52,7 @@ function displayForecast(data) {
         const forecast = data.list[i];
         const dayDiv = document.createElement('div');
 
+        //dynamic updates to html elements based on the pull requiest from the API
         dayDiv.innerHTML = `
             <p>${new Date(forecast.dt_txt).toLocaleDateString()}</p>
             <img src="https://openweathermap.org/img/w/${forecast.weather[0].icon}.png" alt="Weather Icon">
@@ -55,11 +60,11 @@ function displayForecast(data) {
             <p>Humidity: ${forecast.main.humidity} %</p>
             <p>Wind: ${forecast.wind.speed} m/s</p>
         `;
-
         forecastContainer.appendChild(dayDiv);
     }
 }
 
+//this will pend the city to the history list
 function addToHistory(city) {
     const historyList = document.getElementById('history-list');
     const historyItem = document.createElement('li');
